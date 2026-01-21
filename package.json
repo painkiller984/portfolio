@@ -1,0 +1,18 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "portfolio",
+    "license": "ISC",
+    "author": "Anton",
+    "type": "commonjs",
+    "main": "vite.config.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "just-validate": "^4.3.0",
+        "postcss-pxtorem": "^6.1.0",
+        "vite": "^7.3.1",
+        "vite-plugin-imagemin": "^0.6.1"
+    }
+}

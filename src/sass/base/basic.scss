@@ -1,0 +1,91 @@
+@use "/src/sass/base/variables.scss" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.scroll-lock {
+    overflow: hidden;
+}
+
+.font-size12 {
+    color: $black;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.toggle {
+    width: 10px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 940px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,111 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.skills {
+    padding-top: 120px;
+
+    &__grid {
+        margin-top: 85px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;
+        gap: 13px;
+    }
+
+    &__box {
+        padding: 30px 30px 25px;
+        border: 1px solid $black;
+        &-img {
+            height: 65px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                object-fit: contain;
+                max-height: 100%;
+            }
+        }
+        &-title {
+            margin-top: 20px;
+        }
+        &-text {
+            margin-top: 15px;
+        }
+    }
+
+    &__productivity {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-auto-rows: minmax(60px, auto);
+        gap: 38px 45px;
+        margin-top: 120px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        &-head {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-title {
+            position: relative;
+            padding-left: 14px;
+            @include circle;
+            &::before {
+                top: -8px;
+                left: 0;
+            }
+        }
+    }
+
+    &__item-percents {
+        color: $black;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    &__item-progress-bar {
+        // margin-top: 20px;
+        width: 100%;
+        height: 14px;
+        background: #b4b0b077;
+        &-color {
+            background: $main-color;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding-top: 40px;
+        &__grid,
+        &__productivity {
+            margin-top: 35px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .skills {
+        &__grid,
+        &__productivity {
+            grid-template-columns: 1fr;
+        }
+    }
+}

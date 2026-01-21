@@ -1,0 +1,69 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.title-fs16 {
+    color: $black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.title-fs14 {
+    color: $black;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.title-h1 {
+    color: $black;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.title-h2 {
+    color: $black;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.section__title {
+    text-align: center;
+    position: relative;
+    @include circle;
+    &::before {
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.section__title-big {
+    text-align: center;
+    position: relative;
+    @include line;
+    &::after {
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .title-h1 {
+        line-height: 39px;
+        font-size: 30px;
+    }
+    .title-h2 {
+        line-height: 36px;
+        font-size: 24px;
+    }
+    .section__title-big {
+        margin-top: 25px;
+        &::after {
+            bottom: -14px;
+        }
+    }
+}

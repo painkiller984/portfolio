@@ -1,0 +1,51 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.sidepanel {
+    position: fixed;
+    top: 200px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 1;
+
+    &__link {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__link:nth-child(1) {
+        transform: rotate(-90deg);
+    }
+
+    &__line {
+        width: 2px;
+        height: 70px;
+        background: $black;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 148px;
+        span {
+            flex: 1 0 auto;
+            display: block;
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .sidepanel {
+        left: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    .sidepanel {
+        display: none;
+    }
+}

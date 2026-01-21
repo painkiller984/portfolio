@@ -1,0 +1,77 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.price {
+    padding-top: 66px;
+    &__subtitle {
+        margin-top: 20px;
+    }
+    &__wrapper {
+        margin: 90px 50px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__freelance,
+    &__work {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__info {
+        padding-left: 25px;
+        width: 350px;
+        &-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 2px;
+            position: relative;
+            @include circle-min;
+            &::before {
+                left: -25px;
+                top: 3px;
+            }
+        }
+        &-text {
+            margin-top: 5px;
+            p {
+                display: none;
+            }
+            p.active {
+                display: inline;
+            }
+            span.active {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .price {
+        &__wrapper {
+            gap: 30px;
+            margin: 50px 0 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .price {
+        padding-top: 40px;
+        &__wrapper {
+            align-items: center;
+            flex-direction: column;
+        }
+        &__info {
+            width: auto;
+            max-width: 350px;
+        }
+    }
+}

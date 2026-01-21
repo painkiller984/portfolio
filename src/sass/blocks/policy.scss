@@ -1,0 +1,25 @@
+.policy {
+    padding: 100px 30vw;
+    background-color: rgb(75, 72, 72);
+    color: white;
+    height: 100%;
+    p {
+        margin: 10px 0;
+    }
+    a {
+        color: aqua;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .policy {
+        padding: 100px 10vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .policy {
+        padding: 100px 10px;
+    }
+}

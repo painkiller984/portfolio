@@ -1,0 +1,105 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.experience {
+    padding-top: 120px;
+
+    &__wrapper {
+        padding: 0 72px;
+        margin-top: 85px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__education {
+        max-width: 418px;
+        display: flex;
+        gap: 42px;
+        flex: 1 1 0;
+    }
+
+    &__line {
+        position: relative;
+        background: $black;
+        width: 1px;
+        height: 100%;
+        @include circle-min;
+        &::before {
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        color: $black;
+    }
+
+    &__content-title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    &__work {
+        max-width: 418px;
+        display: flex;
+        gap: 42px;
+        flex: 1 1 0;
+    }
+
+    &__head {
+        position: relative;
+        padding-left: 56px;
+        img {
+            width: 20px;
+            height: 25px;
+        }
+        &-line {
+            position: absolute;
+            left: -42px;
+            top: 14px;
+            width: 42px;
+            height: 1px;
+            background: $black;
+            &-img {
+                position: absolute;
+                top: -1px;
+                right: -38px;
+                @include circle;
+                &::before {
+                    top: -16px;
+                    left: -18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .experience {
+        &__wrapper {
+            padding: 0;
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 60px;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &__line {
+            flex: 1 0 auto;
+            height: auto;
+        }
+    }
+}
